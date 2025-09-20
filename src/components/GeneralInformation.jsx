@@ -13,6 +13,11 @@ function GeneralInformation() {
       [e.target.name]: e.target.value,
     });
   }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log('Submitted', formData);
+  }
 }
 
 export { GeneralInformation };
