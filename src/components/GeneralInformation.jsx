@@ -18,6 +18,24 @@ function GeneralInformation() {
     e.preventDefault();
     console.log('Submitted', formData);
   }
+
+  return (
+    <>
+      <h3>Enter personal information here:</h3>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+        </div>
+      </form>
+    </>
+  );
 }
 
 export { GeneralInformation };
