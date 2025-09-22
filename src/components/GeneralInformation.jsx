@@ -44,6 +44,17 @@ function GeneralInformation() {
             onChange={handleChange}
           />
         </div>
+
+        <div>
+          <label htmlFor="phone-number">Phone Number:</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone-number"
+            value={formData.phone}
+            onChange={handleChange}
+          />
+        </div>
       </form>
     </>
   );
