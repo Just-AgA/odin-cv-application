@@ -12,6 +12,10 @@ function GeneralInformation({
     e.preventDefault();
     setIsEditing(false);
   }
+
+  function handleCancel() {
+    setIsEditing(false);
+  }
 }
 
 export { GeneralInformation };
