@@ -29,6 +29,12 @@ function Education({ educationList, setEducationList }) {
 
     setForm({ school: '', degree: '', year: '' });
   }
+
+  function handleEdit(index) {
+    setForm(educationList[index]);
+    setIsEditing(true);
+    setCurrentEditIndex(index);
+  }
 }
 
 export { Education };
