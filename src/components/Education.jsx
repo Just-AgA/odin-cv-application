@@ -44,6 +44,12 @@ function Education({ educationList, setEducationList }) {
       setForm({ school: '', degree: '', year: '' });
     }
   }
+
+  function handleCancel() {
+    setIsEditing(false);
+    setCurrentEditIndex(null);
+    setForm({ school: '', degree: '', year: '' });
+  }
 }
 
 export { Education };
