@@ -35,6 +35,15 @@ function Education({ educationList, setEducationList }) {
     setIsEditing(true);
     setCurrentEditIndex(index);
   }
+
+  function handleDelete(index) {
+    const newList = educationList.filter((_, i) => i !== index);
+    setEducationList(newList);
+    if (isEditing && index === currentEditIndex) {
+      setIsEditing(false);
+      setForm({ school: '', degree: '', year: '' });
+    }
+  }
 }
 
 export { Education };
