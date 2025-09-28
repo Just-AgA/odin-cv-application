@@ -50,6 +50,41 @@ function Education({ educationList, setEducationList }) {
     setCurrentEditIndex(null);
     setForm({ school: '', degree: '', year: '' });
   }
+
+  return (
+    <div>
+      <h3>Education</h3>
+      <form onSubmit={handleSubmit}>
+        <input
+          name="school"
+          value={form.school}
+          onChange={handleChange}
+          placeholder="School"
+          required
+        />
+        <input
+          name="degree"
+          value={form.degree}
+          onChange={handleChange}
+          placeholder="Degree"
+          required
+        />
+        <input
+          name="year"
+          value={form.year}
+          onChange={handleChange}
+          placeholder="Year"
+          required
+        />
+        <button type="submit">{isEditing ? 'Update' : 'Add Education'}</button>
+        {isEditing && (
+          <button type="button" onClick={handleCancel}>
+            Cancel
+          </button>
+        )}
+      </form>
+    </div>
+  );
 }
 
 export { Education };
