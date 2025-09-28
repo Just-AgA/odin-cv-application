@@ -83,20 +83,6 @@ function Education({ educationList, setEducationList }) {
           </button>
         )}
       </form>
-
-      <ul>
-        {educationList.map((item, index) => (
-          <li key={index}>
-            {item.degree} from {item.school} ({item.year}){' '}
-            <button type="button" onClick={() => handleEdit(index)}>
-              Edit
-            </button>
-            <button type="button" onClick={() => handleDelete(index)}>
-              Delete
-            </button>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
