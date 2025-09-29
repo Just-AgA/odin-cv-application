@@ -15,6 +15,28 @@ function WorkExperience({ experienceList, setExperienceList }) {
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (isEditing) {
+      const updatedList = [...experienceList];
+      updatedList[currentEditIndex] = form;
+      setExperienceList(updatedList);
+      setIsEditing(false);
+      setCurrentEditIndex(null);
+    } else {
+      setExperienceList([...experienceList, form]);
+    }
+
+    setForm({
+      company: '',
+      position: '',
+      startDate: '',
+      endDate: '',
+      description: '',
+    });
+  }
 }
 
 export { WorkExperience };
