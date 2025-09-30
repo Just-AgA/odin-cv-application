@@ -43,6 +43,21 @@ function WorkExperience({ experienceList, setExperienceList }) {
     setIsEditing(true);
     setCurrentEditIndex(index);
   }
+
+  function handleDelete(index) {
+    const newList = experienceList.filter((_, i) => i !== index);
+    setExperienceList(newList);
+    if (isEditing && index === currentEditIndex) {
+      setIsEditing(false);
+      setForm({
+        company: '',
+        position: '',
+        startDate: '',
+        endDate: '',
+        description: '',
+      });
+    }
+  }
 }
 
 export { WorkExperience };
