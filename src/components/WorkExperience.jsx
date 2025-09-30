@@ -37,6 +37,12 @@ function WorkExperience({ experienceList, setExperienceList }) {
       description: '',
     });
   }
+
+  function handleEdit(index) {
+    setForm(experienceList[index]);
+    setIsEditing(true);
+    setCurrentEditIndex(index);
+  }
 }
 
 export { WorkExperience };
