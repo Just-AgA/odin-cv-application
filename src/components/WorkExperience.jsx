@@ -58,6 +58,18 @@ function WorkExperience({ experienceList, setExperienceList }) {
       });
     }
   }
+
+  function handleCancel() {
+    setIsEditing(false);
+    setCurrentEditIndex(null);
+    setForm({
+      company: '',
+      position: '',
+      startDate: '',
+      endDate: '',
+      description: '',
+    });
+  }
 }
 
 export { WorkExperience };
