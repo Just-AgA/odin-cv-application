@@ -70,6 +70,59 @@ function WorkExperience({ experienceList, setExperienceList }) {
       description: '',
     });
   }
+
+  return (
+    <div>
+      <h3>Work Experience</h3>
+      <form onSubmit={handleSubmit}>
+        <input
+          name="company"
+          value={form.company}
+          onChange={handleChange}
+          placeholder="Company"
+          required
+        />
+        <input
+          name="position"
+          value={form.position}
+          onChange={handleChange}
+          placeholder="Position"
+          required
+        />
+        <input
+          name="startDate"
+          type="text"
+          value={form.startDate}
+          onChange={handleChange}
+          placeholder="Start Date"
+          required
+        />
+        <input
+          name="endDate"
+          type="text"
+          value={form.endDate}
+          onChange={handleChange}
+          placeholder="End Date"
+          required
+        />
+        <textarea
+          name="description"
+          value={form.description}
+          onChange={handleChange}
+          placeholder="Description"
+          rows="3"
+        />
+        <button type="submit">
+          {isEditing ? 'Update Experience' : 'Add Experience'}
+        </button>
+        {isEditing && (
+          <button type="button" onClick={handleCancel}>
+            Cancel
+          </button>
+        )}
+      </form>
+    </div>
+  );
 }
 
 export { WorkExperience };
