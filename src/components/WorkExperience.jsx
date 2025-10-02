@@ -133,6 +133,8 @@ function WorkExperience({ experienceList, setExperienceList }) {
               {item.startDate} – {item.endDate}
             </p>
             <p>{item.description}</p>
+            <button onClick={() => handleEdit(index)}>Edit</button>
+            <button onClick={() => handleDelete(index)}>Delete</button>
           </li>
         ))}
       </ul>
