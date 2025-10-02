@@ -121,6 +121,21 @@ function WorkExperience({ experienceList, setExperienceList }) {
           </button>
         )}
       </form>
+
+      <ul>
+        {experienceList.map((item, index) => (
+          <li key={index}>
+            <p>
+              <strong>{item.position}</strong> at{' '}
+              <strong>{item.company}</strong>
+            </p>
+            <p>
+              {item.startDate} – {item.endDate}
+            </p>
+            <p>{item.description}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
