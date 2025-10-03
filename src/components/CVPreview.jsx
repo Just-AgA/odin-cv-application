@@ -17,6 +17,17 @@ function CVPreview({ generalInfo, educationList, experienceList }) {
           <strong>Phone:</strong> {generalInfo.phone}
         </p>
       </section>
+
+      <section>
+        <h3>Education</h3>
+        <ul>
+          {educationList.map((edu, idx) => (
+            <li key={idx}>
+              <strong>{edu.degree}</strong> at {edu.school} ({edu.year})
+            </li>
+          ))}
+        </ul>
+      </section>
     </div>
   );
 }
