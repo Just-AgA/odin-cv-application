@@ -28,6 +28,20 @@ function CVPreview({ generalInfo, educationList, experienceList }) {
           ))}
         </ul>
       </section>
+
+      <section>
+        <h3>Work Experience</h3>
+        <ul>
+          {experienceList.map((exp, idx) => (
+            <li key={idx}>
+              <strong>{exp.position}</strong> at {exp.company}
+              <br />
+              {exp.startDate} – {exp.endDate}
+              <p>{exp.description}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
     </div>
   );
 }
