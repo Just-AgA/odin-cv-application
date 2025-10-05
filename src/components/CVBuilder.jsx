@@ -17,6 +17,20 @@ function CVBuilder() {
 
   // Work Experience State
   const [experienceList, setExperienceList] = useState([]);
+
+  return (
+    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem' }}>
+      <h1>CV Builder</h1>
+      <hr />
+
+      <GeneralInformation
+        formData={generalInfo}
+        setFormData={setGeneralInfo}
+        isEditing={isEditingGeneral}
+        setIsEditing={setIsEditingGeneral}
+      />
+    </div>
+  );
 }
 
 export default CVBuilder;
