@@ -29,6 +29,13 @@ function CVBuilder() {
         isEditing={isEditingGeneral}
         setIsEditing={setIsEditingGeneral}
       />
+
+      <hr />
+
+      <Education
+        educationList={educationList}
+        setEducationList={setEducationList}
+      />
     </div>
   );
 }
