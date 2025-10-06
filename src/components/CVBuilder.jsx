@@ -43,6 +43,14 @@ function CVBuilder() {
         experienceList={experienceList}
         setExperienceList={setExperienceList}
       />
+
+      <hr />
+
+      <CVPreview
+        generalInfo={generalInfo}
+        educationList={educationList}
+        experienceList={experienceList}
+      />
     </div>
   );
 }
